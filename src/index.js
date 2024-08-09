@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Notiflix from 'notiflix';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+import { lightbox } from './lightbox/lightbox';
 import '../css/styles.css';
 
 const form = document.querySelector('#search-form');
@@ -116,4 +115,5 @@ function marcup(data) {
     .join('');
   divGallery.insertAdjacentHTML('beforeend', marcup);
   buttonMore.hidden = false;
+  lightbox.refresh();
 }
